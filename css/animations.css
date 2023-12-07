@@ -1,0 +1,15 @@
+/* Hover animation */
+
+@keyframes hover {
+  /* At 0% percent of the naimation we are at 0 */
+  0% {
+    transform: translateY(0);
+  }
+  /* At 50% we are 5 px down */
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

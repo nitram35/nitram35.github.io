@@ -1,3 +1,176 @@
+/*Custom Font*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
+/* General */
 body {
-  background: red;
+  font-family: "Poppins", sans-serif;
+  /* we create variable for light and dark mode */
+  background: var(--bg);
+  color: var(--text);
+  height: 100%;
+  width: 100%;
+  /*removing margin */
+  margin: 0;
+  /*clicking elements like button will give transparetn style */
+  -webkit-tap-highlight-color: transparent;
+}
+/* Removing margin of the text */
+h1,
+h2,
+h5,
+p {
+  margin: 0;
+}
+
+.icon {
+  /* 1rem = 16px */
+  height: 2rem;
+  width: 2rem;
+  margin: 0 0.5rem;
+}
+
+/* Hero */
+#hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Center the text perfectly and responsive */
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#hero__animation {
+  animation-name: hover;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  /* start slow, speed up and slow again */
+  animation-timing-function: ease-in-out;
+  height: 25rem;
+  width: 25rem;
+  /* Removing scrollbar and unwanted function with that, so each time we will be at max of screen size */
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+#hero__animation__img {
+  /* We use a variable for image because we change the image depending on the place we click */
+  background-image: var(--tl-1);
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Grid common attributes/style*/
+#grid {
+  position: absolute; /*by default start at top left*/
+  display: grid;
+  /* We split in 4 the page */
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  width: 100vw;
+}
+
+#grid__tl__btn,
+#grid__tr__btn,
+#grid__bl__btn,
+#grid__br__btn {
+  height: 18.75rem;
+  width: 18.75rem;
+  background: var(--bg);
+  color: var(--text);
+  border: var(--border);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.5rem;
+  z-index: 100;
+  border-radius: 40%;
+  transition: transform 0.2s ease-in-out;
+}
+
+#grid__tl__content,
+#grid__tr__content,
+#grid__bl__content,
+#grid__br__content {
+  position: absolute;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  color: var(--text-alt);
+}
+
+#grid__tl__btn,
+#grid__tr__btn {
+  padding-bottom: 0.5rem;
+  align-items: flex-end;
+}
+
+#grid__bl__btn,
+#grid__br__btn {
+  padding-top: 0.5rem;
+}
+/* We give rotation 2 times for each corner so that they cancel each other, because it rotates if we keep only one parameter */
+#grid__tl__btn:active,
+#grid__br__btn:active {
+  transform: rotate(-45deg) scale(1.05);
+}
+
+#grid__tr__btn:active,
+#grid__bl__btn:active {
+  transform: rotate(45deg) scale(1.05);
+}
+
+/* Top left corner */
+#grid__tl__btn {
+  transform: rotate(-45deg);
+  top: -11.5rem;
+  left: -11.5rem;
+}
+#grid__tl__content {
+  width: 30vw;
+  top: 10vh;
+  left: 0;
+  /* We push content out of the screen */
+  /* transform: translateX(-100vw) translateY(-100vh); */
+}
+
+article {
+  background: rgb(245, 245, 245);
+  font-size: 0.8rem;
+  list-style: none;
+  border: var(--border);
+  border-radius: 2rem;
+  padding: 0.5rem;
+  margin: 1rem;
+  width: 8.75rem;
+  min-width: 8.75rem;
+}
+
+article h2 {
+  font-size: 1rem;
+  padding: 0.3rem;
+}
+
+article p {
+  padding-bottom: 0.3rem;
+}
+article h2,
+article p {
+  color: #333;
+}
+
+.cards {
+  padding: 0;
+}
+.card__content {
+  display: flex;
+  align-items: center;
+}
+.card__content__text {
+  color: var(--text);
+  text-align: left;
+  margin: 0 1rem;
 }

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Martin Gandon Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
     <!-- defer = load HTML first and then js -->
     <script src="/js/animation.js" defer></script>
     <script src="/js/color-mode.js" defer></script>
@@ -15,6 +16,47 @@
 </head>
 
 <body>
+    <div id="hero">
+        <h5>Hello I'm</h5>
+        <h1>Martin Gandon</h1>
+        <p>Engineering Student at Université de Technologie de Troyes</p>
+        <!-- Block, Element, modifier naming convention, because we are in the div hero -->
+        <div id="hero__animation">
+            <div id="hero__animation__img"></div>
+        </div>
+    </div>
+    <nav id="grid">
+        <div id="grid__tl">
+            <div id="grid__tl__btn">About</div>
+            <div id="grid__tl__content">
+                <div class="cards">
+                    <div class="cards__content">
+                        <article>
+                            <img src="./assets/icons/experience.png" alt="Experience icon" class="icon">
+                            <h2>Experience</h2>
+                            <p>4ème année ISI <br> 2e experience <br> 3e experience </p>
+                        </article>
+                        <p class="cards__content__text">
+                            Lorem ipsum dolor sit amet consectetur.
+                        </p>
+                    </div>
+                    <div class="cards__content">
+                        <article>
+                            <img src="./assets/icons/education.png" alt="Education icon" class="icon">
+                            <h2>Education</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                        </article>
+                        <p class="cards__content__text">
+                            Lorem ipsum dolor sit amet consectetur.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="color-mode">
+        <div id="toggle-button" class="icon"></div>
+    </div>
 
 </body>
 
