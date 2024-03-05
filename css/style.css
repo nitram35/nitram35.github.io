@@ -134,7 +134,7 @@ p {
   top: 10vh;
   left: 0;
   /* We push content out of the screen */
-  /* transform: translateX(-100vw) translateY(-100vh); */
+  transform: translateX(-100vw) translateY(-100vh);
 }
 
 article {
