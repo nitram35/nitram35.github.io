@@ -166,9 +166,9 @@
   }
 }
 
-/* Animate top right */
+/* Animate bottom right */
 
-.animate-top-right {
+.animate-bottom-right {
   animation-name: bottom-right;
 }
 

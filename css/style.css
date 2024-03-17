@@ -316,3 +316,31 @@ button {
 }
 
 /* BOTTOM RIGHT CORNER */
+
+#grid__br__btn {
+  bottom: -11.5rem;
+  right: -11.5rem;
+  transform: rotate(-45deg);
+}
+
+#grid__br__content {
+  bottom: 0;
+  right: 0;
+  transform: translateX(100vw) translateY(100vh);
+}
+
+#grid__br__content div {
+  display: flex;
+  margin: 0.5rem auto;
+  gap: 1.2rem;
+  width: 17rem;
+}
+
+.contact-text {
+  color: var(--text);
+}
+
+.btn-contact {
+  border: var(--border);
+  border-radius: 2rem;
+}
