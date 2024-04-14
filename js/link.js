@@ -26,7 +26,7 @@ function openCV() {
     link.click()
 }
 
-function project1Demo() {
+function openPortfolioWebsite() {
     var link = document.createElement("a")
     link.href = "https://nitram35.github.io/nitram35.github.io/"
     link.target = "_blank"
